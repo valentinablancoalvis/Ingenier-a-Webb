@@ -1,0 +1,119 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.btn {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    margin: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: 500;
+    box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #ff1e56, #ff5733);
+    transform: scale(1.07);
+    box-shadow: 0px 6px 12px rgba(255, 0, 0, 0.3);
+}
+
+input {
+    padding: 12px;
+    width: 90%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 12px;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #0072ff;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 114, 255, 0.3);
+}
+
+#mensaje {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animación al validar cupones */
+@keyframes fade {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+
+.animacion {
+    animation: fade 1s ease-in-out;
+}
+
+.valido {
+    color: #008000;
+    background-color: #d4edda;
+    border: 1px solid #28a745;
+}
+
+.invalido {
+    color: #b00020;
+    background-color: #f8d7da;
+    border: 1px solid #dc3545;
+}
+
+/* Diseño responsivo para móviles */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
